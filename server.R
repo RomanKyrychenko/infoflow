@@ -1,5 +1,5 @@
 shinyServer(function(input, output){
-  #unzip("persons.zip")
+  unzip("persons.zip")
   df <- reactive({
     inFile <- input$file1
     

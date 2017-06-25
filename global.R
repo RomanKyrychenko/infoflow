@@ -5,6 +5,7 @@ library(grid)
 library(gridExtra)
 library(cowplot)
 library(png)
+library(extrafont)
 
 interp_points <- function (data) {
   
