@@ -5,10 +5,10 @@ shinyUI(fluidPage(
       fileInput('file1', 'Завантажте файл з даними',
                 accept = c(".xlsx")),
       tags$hr(),
-      downloadButton('downloadPlot',"Завантажити в pdf!"),
-      downloadButton('download',"Завантажити в png!")
+      downloadButton('down',"Завантажити в pdf!"),
+      downloadButton('do',"Завантажити в png!")
     ),
-    mainPanel("Візуалізація",plotOutput('plot', width = "1132px", height = "800px"))
+      mainPanel("Візуалізація",plotOutput('plot', width = "1132px", height = "800px"))
+    )
   )
-)
 )

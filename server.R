@@ -1,4 +1,5 @@
 shinyServer(function(input, output){
+  #unzip("persons.zip")
   df <- reactive({
     inFile <- input$file1
     
@@ -190,23 +191,29 @@ shinyServer(function(input, output){
     }
     infoflow(data)
   })
+  
   output$plot <- renderPlot({
     tryCatch(df())
   })
-  output$downloadPlot <-  downloadHandler(
-    filename = function(){paste0("infoflow",Sys.Date(),".pdf")},
+  
+  output$down <- downloadHandler(
+    filename = function(){
+      paste0("infoflow-",Sys.Date(),".pdf")
+      },
     content = function(file) {
-      cairo_pdf(file, width=15.98, height=11.93)
-      print(df())
+      cairo_pdf(file, width=15.98, height=11.93,bg = "white")
+      grid.draw(df())
       dev.off()
     }
   )
   
-  output$download<-  downloadHandler(
-    filename = function(){paste0("infoflow",Sys.Date(),".png")},
+  output$do <- downloadHandler(
+    filename = function(){
+      paste0("infoflow-",Sys.Date(),".png")
+      },
     content = function(file) {
-      png(file, width=1700, height=2200)
-      print(df())
+      png(file, width=2200, height=1700,bg = "white")
+      grid.draw(df())
       dev.off()
     }
   )
