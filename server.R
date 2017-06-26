@@ -44,7 +44,7 @@ shinyServer(function(input, output){
       
       p2 <- ggplot()+
         geom_bar(aes(reorder(data[[1]][14:23],as.numeric(data[[2]][14:23])),
-                     as.numeric(data[[3]][14:23])/1000),stat = "identity",width = 0.6,fill="#bcbec0")+
+                     as.numeric(data[[3]][14:23])),stat = "identity",width = 0.6,fill="#bcbec0")+
         geom_bar(aes(reorder(data[[1]][14:23],as.numeric(data[[2]][14:23])),
                      as.numeric(data[[2]][14:23])),stat = "identity",width = 0.4,fill="#c41e58")+
         geom_text(aes(reorder(data[[1]][14:23],as.numeric(data[[2]][14:23])),0,
@@ -84,14 +84,14 @@ shinyServer(function(input, output){
         ) 
       
       p4 <- ggplot()+
-        geom_text(aes(1,por,label=ifelse(!is.na(as.numeric(data[[4]][14:23])),paste0(round(as.numeric(data[[4]][14:23])),"%"),"∞")),family = "PT Sans",
+        geom_text(aes(1,por,label=ifelse(!is.na(as.numeric(data[[4]][14:23])),paste0(round(as.numeric(data[[4]][14:23])*100),"%"),"∞")),family = "PT Sans",
                   hjust=1,color=ifelse(as.numeric(data[[4]][14:23])>0 | is.na(as.numeric(data[[4]][14:23])),"#136278","#c41e58"),size=6) +
         geom_segment(aes(x=1.01,y=ifelse(is.na(as.numeric(data[[4]][14:23])) | as.numeric(data[[4]][14:23])>0,por-0.3,por+0.3),
                          xend=1.01,yend=ifelse(is.na(as.numeric(data[[4]][14:23])) | as.numeric(data[[4]][14:23])>0,por+0.3,por-0.3)),
                      arrow = arrow(length = unit(0.2, "cm")),size=1,color=ifelse(as.numeric(data[[4]][14:23])>0 | is.na(as.numeric(data[[4]][14:23])),"#136278","#c41e58"))+
         ylab("")+
         xlab("")+
-        scale_x_continuous(limits = c(0.9,1.04))+
+        scale_x_continuous(limits = c(0.85,1.04))+
         scale_y_continuous(limits = c(0,10.5),expand = c(0, 0))+
         theme(
           legend.position = "none",
@@ -148,7 +148,7 @@ shinyServer(function(input, output){
         {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][23],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][23],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ncol=1)
       p7 <- ggplot()+
-        geom_text(aes(1,por,label=ifelse(!is.na(as.numeric(data[[4]][2:11])),paste0(round(as.numeric(data[[4]][2:11])),"%"),"∞")),family = "PT Sans",hjust=0,
+        geom_text(aes(1,por,label=ifelse(!is.na(as.numeric(data[[4]][2:11])),paste0(round(as.numeric(data[[4]][2:11])*100),"%"),"∞")),family = "PT Sans",hjust=0,
                   color=ifelse(as.numeric(data[[4]][2:11])>0,"#136278","#c41e58"),size=6) +
         geom_segment(aes(x=0.99,y=ifelse(as.numeric(data[[4]][2:11])>0,por-0.3,por+0.3),
                          xend=0.99,yend=ifelse(as.numeric(data[[4]][2:11])>0,por+0.3,por-0.3)),
@@ -212,7 +212,7 @@ shinyServer(function(input, output){
       paste0("infoflow-",Sys.Date(),".png")
       },
     content = function(file) {
-      png(file, width=2200, height=1700,bg = "white")
+      png(file, width=1132, height=800,bg = "white")
       grid.draw(df())
       dev.off()
     }

@@ -3,9 +3,9 @@ title: infoflow
 account: romankyrychenko
 server: shinyapps.io
 appId: 192202
-bundleId: 882005
+bundleId: 882075
 url: https://romankyrychenko.shinyapps.io/infoflow/
-when: 1498466564.60857
+when: 1498470815.64969
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: draft_1.eps|exp.pdf|inf.pdf|infoflow.R|persons.zip|Rplot.pdf|top-person.xlsx|whatever.pdf|persons/savchenko.png
+ignoredFiles: ~$top-person.xlsx|draft_1.eps|exp.pdf|inf.pdf|infoflow.R|persons.zip|Rplot.pdf|top-person.xlsx|whatever.pdf|persons/savchenko.png
