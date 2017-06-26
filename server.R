@@ -91,7 +91,7 @@ shinyServer(function(input, output){
                      arrow = arrow(length = unit(0.2, "cm")),size=1,color=ifelse(as.numeric(data[[4]][14:23])>0 | is.na(as.numeric(data[[4]][14:23])),"#136278","#c41e58"))+
         ylab("")+
         xlab("")+
-        scale_x_continuous(limits = c(0.85,1.04))+
+        scale_x_continuous(limits = c(0.82,1.02))+
         scale_y_continuous(limits = c(0,10.5),expand = c(0, 0))+
         theme(
           legend.position = "none",
@@ -155,7 +155,7 @@ shinyServer(function(input, output){
                      arrow = arrow(length = unit(0.2, "cm")),size=1,color=ifelse(as.numeric(data[[4]][2:11])>0,"#136278","#c41e58"))+
         ylab("")+
         xlab("")+
-        scale_x_continuous(limits = c(0.97,1.1))+
+        scale_x_continuous(limits = c(0.98,1.1))+
         scale_y_continuous(limits = c(0,10.5),expand = c(0, 0))+
         theme(
           legend.position = "none",
@@ -187,7 +187,7 @@ shinyServer(function(input, output){
                                        c(13,13,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7),
                                        c(11,11,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,9),
                                        c(11,11,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11)),
-                   widths=c(0.5,0.5,3,1,3,0.5,0.5))
+                   widths=c(0.6,0.65,3,1,3,0.65,0.6))
     }
     infoflow(data)
   })
@@ -201,7 +201,7 @@ shinyServer(function(input, output){
       paste0("infoflow-",Sys.Date(),".pdf")
       },
     content = function(file) {
-      cairo_pdf(file, width=15.98, height=11.93,bg = "white")
+      cairo_pdf(file, width=16.98, height=10.93,bg = "white")
       grid.draw(df())
       dev.off()
     }
@@ -212,7 +212,7 @@ shinyServer(function(input, output){
       paste0("infoflow-",Sys.Date(),".png")
       },
     content = function(file) {
-      png(file, width=1132, height=800,bg = "white")
+      png(file, width=1182, height=750,bg = "white")
       grid.draw(df())
       dev.off()
     }
