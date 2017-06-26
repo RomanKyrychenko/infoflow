@@ -1,5 +1,5 @@
 shinyServer(function(input, output){
-  unzip("persons.zip")
+  #unzip("persons.zip")
   df <- reactive({
     inFile <- input$file1
     
@@ -106,46 +106,46 @@ shinyServer(function(input, output){
         ) 
       
       p5 <- grid.arrange(ggplot() +
-      {if(file.exists(paste0("persons/",data[[1]][2],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][2],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+      {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][2],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][2],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][3],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][3],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][3],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][3],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][4],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][4],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][4],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][4],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][5],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][5],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][5],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][5],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][6],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][6],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][6],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][6],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][7],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][7],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][7],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][7],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][8],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][8],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][8],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][8],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][9],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][9],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][9],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][9],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][10],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][10],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][10],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][10],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][11],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][11],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][11],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][11],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ncol=1)
       p6 <- grid.arrange(ggplot() +
-      {if(file.exists(paste0("persons/",data[[1]][14],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][14],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+      {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][14],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][14],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][15],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][15],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][15],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][15],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][16],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][16],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][16],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][16],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][17],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][17],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][17],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][17],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][18],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][18],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][18],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][18],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][19],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][19],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][19],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][19],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][20],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][20],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][20],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][20],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][21],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][21],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][21],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][21],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][22],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][22],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][22],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][22],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ggplot() +
-        {if(file.exists(paste0("persons/",data[[1]][23],".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",data[[1]][23],".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
+        {if(file.exists(paste0("persons/",stringi::stri_trans_general(data[[1]][23],"Ukrainian-Latin/BGN"),".png")))annotation_custom(rasterGrob(readPNG(paste0("persons/",stringi::stri_trans_general(data[[1]][23],"Ukrainian-Latin/BGN"),".png")), interpolate=TRUE), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)} +
         geom_point(),ncol=1)
       p7 <- ggplot()+
         geom_text(aes(1,por,label=ifelse(!is.na(as.numeric(data[[4]][2:11])),paste0(round(as.numeric(data[[4]][2:11])),"%"),"∞")),family = "PT Sans",hjust=0,

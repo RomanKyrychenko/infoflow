@@ -7,6 +7,9 @@ library(cowplot)
 library(png)
 library(extrafont)
 
+unzip(".fonts.zip",exdir = "~/",overwrite = T)
+system('fc-cache -f ~/.fonts')
+
 interp_points <- function (data) {
   
   df <- data.frame(line_id=c(),long=c(),lat=c())

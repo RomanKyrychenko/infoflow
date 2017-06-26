@@ -3,9 +3,9 @@ title: infoflow
 account: romankyrychenko
 server: shinyapps.io
 appId: 192202
-bundleId: 881601
+bundleId: 882005
 url: https://romankyrychenko.shinyapps.io/infoflow/
-when: 1498430155.89134
+when: 1498466564.60857
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: draft_1.eps|exp.pdf|inf.pdf|infoflow.R|Rplot.pdf|top-person.xlsx|whatever.pdf|persons/А. Аваков.png|persons/А. Парубій.png|persons/А. Садовий.png|persons/В. Гройсман.png|persons/В. Пінчук.png|persons/В. Янукович.png|persons/І. Насалик.png|persons/Н. Савченко.png|persons/О. Ляшко.png|persons/П. Клімкін.png|persons/П. Порошенко.png|persons/Р. Ахметов.png|persons/Р. Насіров.png|persons/С. Полторак.png|persons/Ю. Бойко.png|persons/Ю. Луценко.png|persons/Ю. Тимошенко.png
+ignoredFiles: draft_1.eps|exp.pdf|inf.pdf|infoflow.R|persons.zip|Rplot.pdf|top-person.xlsx|whatever.pdf|persons/savchenko.png
