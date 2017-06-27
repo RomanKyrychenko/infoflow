@@ -212,7 +212,7 @@ shinyServer(function(input, output){
       paste0("infoflow-",Sys.Date(),".png")
       },
     content = function(file) {
-      png(file, width=1182, height=750,bg = "white")
+      png(file, width=1240, height=750,bg = "white")
       grid.draw(df())
       dev.off()
     }
